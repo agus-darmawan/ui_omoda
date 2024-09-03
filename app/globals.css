@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent natural scrolling */
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.horizontal-scroll-wrapper {
+  display: flex;
+  overflow-x: scroll; /* Allows horizontal scroll */
+  overflow-y: hidden; /* Prevents vertical scroll */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.horizontalScroll::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Webkit */
+}
+
+.horizontal-scroll-wrapper > .section {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0; /* Prevent sections from shrinking */
+}
+
+.plus-jakarta-font {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
